@@ -52,6 +52,9 @@
 				<value>
 					com.spring.user.User
 				</value>
+				<value>
+					com.spring.user.Product
+				</value>
 			</list>
 		</property>
 	</bean>

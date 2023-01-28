@@ -35,6 +35,9 @@
 				<li class="nav-item active"><a class="nav-link" href="login">Login
 						<span class="sr-only">(current)</span>
 				</a></li>
+				<li class="nav-item active"><a class="nav-link" href="product">Admin
+						<span class="sr-only">(current)</span>
+				</a></li>
 				<li class="nav-item active"><a class="nav-link" href="#">Sign-up
 						<span class="sr-only">(current)</span>
 				</a></li>
