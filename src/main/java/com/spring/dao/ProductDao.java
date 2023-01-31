@@ -1,5 +1,7 @@
 package com.spring.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -19,5 +21,10 @@ public class ProductDao {
 	 int i=(Integer) this.hibernateTemplate.save(product);
 		
 	 return i;
+	}
+	
+	public List<Product> getallProducts(){
+		
+		return this.hibernateTemplate.loadAll(Product.class);
 	}
 }

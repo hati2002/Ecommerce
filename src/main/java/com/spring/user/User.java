@@ -15,7 +15,7 @@ public class User {
 	private int id;
 	private String uname;
 	private String umail;
-	private int psw;
+	private String psw;
 	
 	public String getUname() {
 		return uname;
@@ -29,16 +29,18 @@ public class User {
 	public void setUmail(String umail) {
 		this.umail = umail;
 	}
-	public int getPsw() {
+	
+	public String getPsw() {
 		return psw;
 	}
-	public void setPsw(int psw) {
+	public void setPsw(String psw) {
 		this.psw = psw;
 	}
 	@Override
 	public String toString() {
-		return "User [uname=" + uname + ", umail=" + umail + ", psw=" + psw + "]";
+		return "User [id=" + id + ", uname=" + uname + ", umail=" + umail + ", psw=" + psw + "]";
 	}
+	
 	
 	
 }

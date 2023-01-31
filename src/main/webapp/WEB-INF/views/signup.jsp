@@ -61,7 +61,7 @@
 <body>
     <h2>SIGN-UP</h2>
 
-    <form>
+    <form action="signupform" method="post">
 
         <div class="container">
             <label for="uname"><b>Username</b></label>
@@ -76,7 +76,7 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">Login</button>
+            <button type="submit">SignUp</button>
 
         </div>
 

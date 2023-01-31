@@ -1,5 +1,7 @@
 package com.spring.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +13,14 @@ public class UserService {
 
 	@Autowired
 	private UserDao userDao;
-	
-public int createUser(User user) {
+
+	public int createUser(User user) {
+
+		return this.userDao.saveUser(user);
+	}
+
+	public List<User> getall(){
 		
-	return this.userDao.saveUser(user);
+		return userDao.getAllUserData();
 	}
 }

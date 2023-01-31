@@ -1,5 +1,7 @@
 package com.spring.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +17,10 @@ public class ProductService {
 	public int createUser(Product product) {
 		
 		return this.productDao.saveUser(product);
+	}
+	
+	public List<Product> catchp(){
+		
+		return this.productDao.getallProducts();
 	}
 }

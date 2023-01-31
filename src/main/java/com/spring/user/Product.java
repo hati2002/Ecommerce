@@ -17,6 +17,21 @@ public class Product {
 	private int pprice;
 	private String purl;
 	
+	
+	public Product(int id, String pname, String pdetails, int pprice, String purl) {
+		super();
+		this.id = id;
+		this.pname = pname;
+		Pdetails = pdetails;
+		this.pprice = pprice;
+		this.purl = purl;
+	}
+	
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getId() {
 		return id;
 	}

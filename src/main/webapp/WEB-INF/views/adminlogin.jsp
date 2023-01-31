@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,18 +87,20 @@ form {
 <body>
 	<%@include file="header.jsp"%>
 
-	<h2>Login Form</h2>
+	<h2>Admin Login Form</h2>
 
-	<form action="handleform" method="post">
+	<form action="adminform" method="post">
 
 		<div class="container">
-			 <label
-				for="umail"><b>Usermail</b></label> <input type="text"
-				placeholder="Enter Usermail" name="umail" required> <label
+			
+				<label for="amail"><b>Adminmail</b></label> 
+				<input type="text"
+				placeholder="Enter mail" name="amail" required> <label
 				for="psw"><b>Password</b></label> <input type="password"
 				placeholder="Enter Password" name="psw" required>
 
-			<button type="submit">Login</button>
+
+		<button type="submit">Login</button>
 			<label> <input type="checkbox" checked="checked"
 				name="remember"> Remember me
 			</label>

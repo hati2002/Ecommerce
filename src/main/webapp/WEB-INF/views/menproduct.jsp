@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored = "false" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,52 +31,31 @@
 <body>
 	<div class="container">
 
-		<div class="card" style="width: 18rem;">
-			<img src="<c:url value="/resources/images/p1.webp"/> class="
-				card-img-top" alt="..."">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
+		<c:forEach items="${GetProduct }" var="product">
 
-		<div class="card" style="width: 18rem;">
-			<img src="<c:url value="/resources/images/p2.webp"/> class="
-				card-img-top" alt="..."">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
 
-		<div class="card" style="width: 18rem;">
-			<img src="<c:url value="/resources/images/p3.webp"/> class="
-				card-img-top" alt="..."">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
 
-		<div class="card" style="width: 18rem;">
-			<img src="<c:url value="/resources/images/p4.webp"/> class="
-				card-img-top" alt="..."">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
+			<div class="card" style="width: 18rem;">
+				<img src="<c:out value="${product.purl}" /> class="
+					card-img-top" alt="..."">
+				<div class="card-body">
+					<h5 class="card-title">
+						<c:out value="${product.pname}" />
+					</h5>
+					<%-- <p class="card-text">
+				<c:out value="${product.Pdetails}" />
+					</p> --%>
+					<p>
+						<c:out value="${product.pprice}" />
+					</p>
+					<a href="productdetails" class="btn btn-primary">Details</a> <a
+						href="#" class="btn btn-primary">Add Cart</a>
+				</div>
 			</div>
-		</div>
-	</div>
+		</c:forEach>
 
 	</div>
+
 
 
 

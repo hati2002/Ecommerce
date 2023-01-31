@@ -29,19 +29,18 @@
 				<li class="nav-item active"><a class="nav-link" href="#">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="#">About
-						<span class="sr-only">(current)</span>
-				</a></li>
 				<li class="nav-item active"><a class="nav-link" href="login">Login
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="product">Admin
+				<li class="nav-item active"><a class="nav-link" href="admin">Admin
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item active"><a class="nav-link" href="#">Sign-up
 						<span class="sr-only">(current)</span>
 				</a></li>
-				
+				<li class="nav-item active"><a class="nav-link" href="#">AddCart
+						<span class="sr-only">(current)</span>
+				</a></li>
 			</ul>
 		</div>
 	</nav>
