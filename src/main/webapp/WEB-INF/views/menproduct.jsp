@@ -29,11 +29,11 @@
 </style>
 </head>
 <body>
+<%@include file="/WEB-INF/views/header.jsp" %>
+
 	<div class="container">
 
 		<c:forEach items="${GetProduct }" var="product">
-
-
 
 			<div class="card" style="width: 18rem;">
 				<img src="<c:out value="${product.purl}" /> class="
@@ -48,8 +48,8 @@
 					<p>
 						<c:out value="${product.pprice}" />
 					</p>
-					<a href="productdetails" class="btn btn-primary">Details</a> <a
-						href="#" class="btn btn-primary">Add Cart</a>
+					<a href="productdetails/${product.id }" class="btn btn-primary">Details</a> 
+					<a href="#" class="btn btn-primary">Add Cart</a>
 				</div>
 			</div>
 		</c:forEach>

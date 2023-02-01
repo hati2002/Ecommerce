@@ -26,7 +26,7 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
+				<li class="nav-item active"><a class="nav-link" href="index">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item active"><a class="nav-link" href="login">Login
@@ -35,7 +35,7 @@
 				<li class="nav-item active"><a class="nav-link" href="admin">Admin
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="#">Sign-up
+				<li class="nav-item active"><a class="nav-link" href="signup">Sign-up
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item active"><a class="nav-link" href="#">AddCart

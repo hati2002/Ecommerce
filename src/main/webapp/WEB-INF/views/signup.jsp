@@ -59,6 +59,7 @@
 </head>
 
 <body>
+<%@include file="/WEB-INF/views/header.jsp" %>
     <h2>SIGN-UP</h2>
 
     <form action="signupform" method="post">
@@ -71,12 +72,13 @@
             <input type="text" placeholder="Enter Usermail" name="umail" required>
 
             <label for="ph"><b>Mobile</b></label>
-            <input type="text" placeholder="" name="umail" required>
+            <input type="text" placeholder="" name="uphone" required>
 
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">SignUp</button>
+           <button type="submit">SignUp</button>
+           
 
         </div>
 

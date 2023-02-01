@@ -4,10 +4,13 @@ import javax.swing.text.View;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.spring.dao.ProductDao;
 import com.spring.service.ProductService;
 import com.spring.user.Product;
 
@@ -17,10 +20,18 @@ public class ProductController {
 	@Autowired
 	private ProductService service;
 	
+	
 	@RequestMapping("/product")
 	public String View() {
 		
 		return "product";
+	}
+	
+	@RequestMapping ("/productdetails/{id}")
+	private String viewDetals(@PathVariable int id, Model m) {
+		Product pdProduct = service.getProductById(id);
+		m.addAttribute("getProduct",pdProduct);
+		return "productdetails";
 	}
 	
 	@RequestMapping(path = "/productform",method = RequestMethod.POST)

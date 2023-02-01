@@ -25,26 +25,32 @@ public class HomeController {
 		
 		return "index";
 	}
+	
 	@RequestMapping("login")
 	public String login() {
 
 		return "login";
 	}
 
+	
 	/*
 	 * @RequestMapping(path = "/handleform",method = RequestMethod.POST) public
 	 * String loginDetails(@ModelAttribute User user) {
 	 * 
 	 * System.out.println(user);
 	 * 
-	 * int r=this.us.createUser(user); System.out.println(r); return "success"; }
+	 * int r=this.us.createUser(user); System.out.println(r);
+	 * 
+	 * return "success"; }
 	 */
+	 
 
 	@RequestMapping(path = "/handleform", method = RequestMethod.POST)
 	public String loginuser(@RequestParam("umail") String umail, @RequestParam("psw") String upassword) {
 
 		List<User> list = us.getall();
 		Iterator<User> itr = list.iterator();
+		
 		while (itr.hasNext()) {
 			User user = itr.next();
 			if (user.getUmail().equals(umail) && user.getPsw().equals(upassword)) {

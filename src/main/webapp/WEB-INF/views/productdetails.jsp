@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-  <%@ page isELIgnored = "false" %>
+<%@ page isELIgnored = "false" %>
     
 <!doctype html>
 <html lang="en">
@@ -13,29 +13,33 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>product details</title>
      <style>
+     
       .container {
         border: 2px solid black;
-        max-width: 500px;
+        max-width: 200px; 
         margin: auto;
         padding: 10px;
+        margin-top: 200px;
+      
       }
     </style>
   </head>
   <body>
+    <%@include file="/WEB-INF/views/header.jsp" %>
     
     <div class="container">
       <div class="card mb-3" style="max-width: 540px">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="<c:url value="/resources/images/mp1.webp"/> class="card-img" alt="..." style="height: 135px;">
+            <img src="<c:out value="${product.purl}"/> class="card-img" alt="..." style="height: 135px;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text">Product Details</p>
-              <p class="card-text"><small class="text-muted">Price</small></p>
+              <h5 class="card-title">${getProduct.pname }</h5>
+              <p class="card-text">${getProduct.pdetails }</p>
+              <p class="card-text"><small class="text-muted">${getProduct.pprice }</small></p>
             </div>
           </div>
         </div>
@@ -83,7 +87,7 @@
           />
           <label class="form-check-label" for="inlineRadio2">XL</label>
         </div>
-        <a href="#" class="btn btn-primary">Buy Now</a>
+        <a href="check" class="btn btn-primary">Buy Now</a>
       </div>
     </div>
 
