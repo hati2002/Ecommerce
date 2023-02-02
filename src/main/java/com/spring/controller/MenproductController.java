@@ -21,6 +21,7 @@ public class MenproductController {
 		
 		List<Product> list=ps.catchp();
 		model.addAttribute("GetProduct",list);
+		
 		return "menproduct";
 	}
 	

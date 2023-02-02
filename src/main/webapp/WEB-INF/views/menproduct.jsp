@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page isELIgnored = "false" %>
+<%@ page isELIgnored="false"%>
 
 <!doctype html>
 <html lang="en">
@@ -29,7 +29,7 @@
 </style>
 </head>
 <body>
-<%@include file="/WEB-INF/views/header.jsp" %>
+	<%@include file="/WEB-INF/views/header.jsp"%>
 
 	<div class="container">
 
@@ -48,19 +48,14 @@
 					<p>
 						<c:out value="${product.pprice}" />
 					</p>
-					<a href="productdetails/${product.id }" class="btn btn-primary">Details</a> 
-					<a href="#" class="btn btn-primary">Add Cart</a>
+					<a href="productdetails/${product.id }" class="btn btn-primary">Details</a>
+
+
 				</div>
 			</div>
 		</c:forEach>
 
 	</div>
-
-
-
-
-
-
 
 
 

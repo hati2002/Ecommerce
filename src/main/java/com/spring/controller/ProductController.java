@@ -28,7 +28,7 @@ public class ProductController {
 	}
 	
 	@RequestMapping ("/productdetails/{id}")
-	private String viewDetals(@PathVariable int id, Model m) {
+	public String viewDetals(@PathVariable int id, Model m) {
 		Product pdProduct = service.getProductById(id);
 		m.addAttribute("getProduct",pdProduct);
 		return "productdetails";
@@ -44,6 +44,8 @@ public class ProductController {
 		
 		return "success";
 	}
+	
+	
 	
 	
 }
