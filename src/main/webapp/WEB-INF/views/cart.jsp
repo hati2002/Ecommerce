@@ -21,25 +21,32 @@
 </head>
 <body>
 
-	<table cellpadding="2" cellspacing="2" border="1">
+	<table cellpadding="2" cellspacing="2" border="1" >
 		<tr>
 			<th>Product Id</th>
 			<th>Product Name</th>
 			<th>Product Price</th>
 			<th>Product Url</th>
+			<th>Delete</th>
+			
 		</tr>
 		<c:forEach var="item" items="${cart }">
-			<tr>
+			<tr id="myTable">
 				<td>${item.id }</td>
 				<td>${item.pname }</td>
 				<td>${item.pprice }</td>
 				<td>${item.purl }</td>
+				
+				<td><a href="<c:url value="/delete/${item.id }"/>"
+ class="btn btn-primary">Delete</a></td>	
 			</tr>
 		</c:forEach>
-		    
-	</table>
 
+</table>
 
+	<div>
+	<h2>Total Price: ${totalprice }</h2>
+	</div>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -54,5 +61,7 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
+		
+		
 </body>
 </html>

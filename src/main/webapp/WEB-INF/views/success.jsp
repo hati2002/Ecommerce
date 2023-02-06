@@ -8,8 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Details are: ${user }</h2>
+<%-- <h2>Details are: ${user }</h2> --%>
 
-<%-- <h2>product details: ${product }</h2> --%>
+<h2>product details: ${product }</h2>
+<h2>product details: ${womenProduct}</h2>
+
 </body>
 </html>

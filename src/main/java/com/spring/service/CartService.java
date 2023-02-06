@@ -13,14 +13,23 @@ public class CartService {
 
 	@Autowired
 	private CartDao cartDao;
-	
+
 	public int createproduct(Item item) {
-		
+
 		return this.cartDao.saveItem(item);
 	}
-	
-	public List<Item> getcartproduct(){
-		
+
+	public List<Item> getcartproduct() {
+
 		return this.cartDao.getalliItems();
+	}
+
+	public void removeItem(Item item) {
+		cartDao.removeitem(item);
+	}
+	
+	public Item getcartItembyId(int prodId) {
+		
+		return cartDao.getbyproductId(prodId);
 	}
 }

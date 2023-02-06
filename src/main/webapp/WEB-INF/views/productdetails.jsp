@@ -31,7 +31,6 @@
 <body>
 	<%@include file="/WEB-INF/views/header.jsp"%>
 
-
 	<div class="container" style="max-width: 660px">
 		<div class="card mb-3" style="max-width: 540px">
 			<div class="row no-gutters">
@@ -74,8 +73,9 @@
 					class="form-check-label" for="inlineRadio2">XL</label>
 			</div>
 			<a href="check" class="btn btn-primary">Buy Now</a>
+			
 			 <a href="<c:url value="/buy/${getProduct.id }"/>"
-				 class="btn btn-primary">Cart</a>
+				 class="btn btn-primary">AddCart</a>
 
 
 		</div>

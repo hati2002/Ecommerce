@@ -58,6 +58,9 @@
 				<value>
 					com.spring.user.Item
 				</value>
+					<value>
+					com.spring.user.WomenProduct
+				</value>
 			</list>
 		</property>
 	</bean>

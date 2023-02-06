@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 
 <!doctype html>
 <html lang="en">
@@ -27,63 +29,35 @@
 </style>
 </head>
 <body>
-	<h1>Women Product</h1>
-
+	<%@include file="/WEB-INF/views/header.jsp"%>
 
 	<div class="container">
-		<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Details</a> <a href="#"
-					class="btn btn-primary">Add Cart</a>
-			</div>
-		</div>
 
-		<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Details</a> <a href="#"
-					class="btn btn-primary">Add Cart</a>
-			</div>
-		</div>
+		<c:forEach items="${getProduct }" var="womenproduct">
 
-		<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Details</a> <a href="#"
-					class="btn btn-primary">Add Cart</a>
-			</div>
-		</div>
+			<div class="card" style="width: 18rem;">
+				<img src="<c:out value="${womenproduct.purl}" /> class="
+					card-img-top" alt="..."">
+				<div class="card-body">
+					<h5 class="card-title">
+						<c:out value="${womenproduct.pname}" />
+					</h5>
+					<%-- <p class="card-text">
+				<c:out value="${product.Pdetails}" />
+					</p> --%>
+					<p>
+						<c:out value="${womenproduct.pprice}" />
+					</p>
+					<a href="productdetails/${womenproduct.id }" class="btn btn-primary">Details</a>
 
-		<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Details</a> <a href="#"
-					class="btn btn-primary">Add Cart</a>
+				</div>
 			</div>
-		</div>
+		</c:forEach>
 
 	</div>
 
 
 
-
-
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>

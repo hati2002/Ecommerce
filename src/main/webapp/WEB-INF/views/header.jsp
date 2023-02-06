@@ -1,3 +1,6 @@
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,8 +18,11 @@
 <title>Hello, world!</title>
 </head>
 <body>
+	<%
+	String name = (String) session.getAttribute("username");
+	%>
 	<nav class="navbar navbar-expand-lg navbar-light bg-slate-400">
-		<a class="navbar-brand" href="#">TREND</a>
+		<a class="navbar-brand" href="home">TREND</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -26,22 +32,37 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="index">Home
+				<li class="nav-item active"><a class="nav-link" href="<c:url value="/home" />">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="login">Login
-						<span class="sr-only">(current)</span>
+				<%
+				if (name != null) {
+				%>
+				<li class="nav-item active"><a class="nav-link">
+						<%
+						out.print(name);
+						%>
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="admin">Admin
-						<span class="sr-only">(current)</span>
+
+				<li class="nav-item active"><a class="nav-link" href="<c:url value="/logout" />">Logout
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="signup">Sign-up
-						<span class="sr-only">(current)</span>
+
+				<li class="nav-item active"><a class="nav-link" href="<c:url value="/cart" />">AddCart
 				</a></li>
-				<li class="nav-item active"><a class="nav-link" href="#">AddCart
-						<span class="sr-only">(current)</span>
+				<%
+				} else {
+				%>
+				<li class="nav-item active"><a class="nav-link" href="<c:url value="/signup" />">Sign-up
 				</a></li>
+				<li class="nav-item active"><a class="nav-link" href="<c:url value="/admin" />">Admin
+				</a></li>
+				<li class="nav-item active"><a class="nav-link" href="<c:url value="/login" />">Login
+				</a></li>
+				<%
+				}
+				%>
 			</ul>
+					
 		</div>
 	</nav>
 
